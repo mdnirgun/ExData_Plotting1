@@ -2,6 +2,8 @@
 ## Description: sources the readData() helper function for reading data file and 
 ##              calls it to get the required input data. It opens a PNG device
 ##              file and plots a line graph of the Global Active Power.
+##              Assumption: The data file is available in the current directory.
+##
 source("readData.R")                          ## source the helper function
 
 power <- readData("household_power_consumption.txt")     ## read the data file

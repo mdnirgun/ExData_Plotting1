@@ -3,6 +3,7 @@
 ##              calls it to get the required input data. It opens a PNG device
 ##              file and plots a line graph of the three energy sub-metering 
 ##              variables and then add a legend to the graph
+##              Assumption: The data file is available in the current directory.
 ##              
 source("readData.R")                              ## source the helper function
 
@@ -21,7 +22,7 @@ with(power, lines(Time, Sub_metering_2,           ## add the next variable graph
 with(power, lines(Time, Sub_metering_3,           ## add the third variable
                   type='l', 
                   col="blue"))
-legend("topright", pch="__", col=c("black", "red", "blue"), 
+legend("topright", pch="___", col=c("black", "red", "blue"), 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 dev.off()

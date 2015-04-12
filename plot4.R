@@ -3,6 +3,7 @@
 ##              calls it to get the required input data. It opens a PNG device
 ##              file, creates a 2x2 array of four graphs to be drawn. It then plots 
 ##              the four graphs in their respective positions. 
+##              Assumption: The data file is available in the current directory.
 ##              
 source("readData.R")                                 ## source the helper function
 
@@ -29,7 +30,7 @@ with(power, lines(Time, Sub_metering_2,
 with(power, lines(Time, Sub_metering_3, 
                   type = 'l', 
                   col = "blue"))
-legend("topright", pch = "__", col = c("black", "red", "blue"), bty = "n",
+legend("topright", pch = "___", col = c("black", "red", "blue"), bty = "n",
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 with(power, plot(Time, Global_reactive_power, 
                  type = 'l', 
